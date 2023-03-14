@@ -1,0 +1,1 @@
+on crée un fichier index.html qui ce trouve dans son dossier dédier 

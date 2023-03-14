@@ -4,11 +4,9 @@ services:
     image: php:8.2-apache
     container_name: Tp-Docker-pt1
     volumes:
-      - ./Docker-pt1/html:/usr/local/apache2
+      - ./html:/var/www/html
     ports:
-      - 89:80
-
-
+      - 82:80
   mysql:
     image: mysql:5.7
     container_name: mysql123
@@ -19,9 +17,9 @@ services:
       MYSQL_ROOT_PASSWORD: aled
       UPLOAD_LIMIT: 20M
     ports:
-    - 3306:3306
+      - 3306:3306
     volumes:
-    - ./Docker-pt1/mysql:/usr/local/mysql
+      - ./Docker-pt1/mysql:/usr/local/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -32,5 +30,6 @@ services:
       - 83:80
     environment:
       - PMA_HOST=mysql
+
 
 
