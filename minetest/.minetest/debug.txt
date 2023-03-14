@@ -1,0 +1,9 @@
+
+
+-------------
+  Separator
+-------------
+
+2023-03-14 14:59:20: [Main]: Using game specified by --gameid on the command line
+2023-03-14 14:59:31: ACTION[Main]: World at [/config/.minetest/worlds/world]
+2023-03-14 14:59:31: ACTION[Main]: Server for gameid="minetest" listening on 0.0.0.0:25565.

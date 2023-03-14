@@ -31,5 +31,20 @@ services:
     environment:
       - PMA_HOST=mysql
 
+  minetest:
+    image: lscr.io/linuxserver/minetest:latest
+    container_name: mine
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - CLI_ARGS=--gameid minetest --port 25565
+    volumes:
+      - ./minetest/.minetest:/config/.minetest
+    ports:
+      - 25565:25565/udp
+    restart: unless-stopped
+
+
 
 
