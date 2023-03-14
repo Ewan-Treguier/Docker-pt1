@@ -23,4 +23,14 @@ services:
     volumes:
     - ./Docker-pt1/mysql:/usr/local/mysql
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    depends_on:
+      - mysql
+    ports:
+      - 83:80
+    environment:
+      - PMA_HOST=mysql
+
 
